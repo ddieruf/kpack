@@ -1,0 +1,57 @@
+---
+apiVersion: experimental.kpack.pivotal.io/v1alpha1
+kind: Store
+metadata:
+  name: fast-store
+spec:
+  sources:
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalsnyk@sha256:4f894a168cf6528306ff81942323e9d61209d4ca9a15210bc076ba5f99a2f0f1
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalsnyk@sha256:4f894a168cf6528306ff81942323e9d61209d4ca9a15210bc076ba5f99a2f0f1
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalopenjdk@sha256:ba9c08e48e2169bb2d0ca5a9d47a05b379ac49dafa487d1270a65d91ce382e8d
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalbuildsystem@sha256:352ec1a3bcdd96a30940b12622e8f928d160edd39fafa16196f478c7e5d45e20
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalwso2@sha256:874578488a3085d75f680cb63c9a9352cea19b321b59c1e3f62edbaaddcffce3
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotaljvmapplication@sha256:0549ef4b4dfbec40556b399d0d5a51942acbdd8b646eab07cbb147fded00c1ab
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalgroovy@sha256:70ccd3291b88361992153dd08646ed016a0404ef06ceaa2cbe51888e61883288
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotaltomcat@sha256:bc7570fafe7e5936344e573ae687376e2e3294f8ab3925eec7bd633d0c67c6a5
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalspringboot@sha256:7fdcf6ed90cc6ba29be4d0f69c79986d820e02e7f9ed97940e8cf42d741483d4
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotaldistzip@sha256:4197fbd6f3da8085e07908085c4b22f289411cb1b215e640f44c395d1444adac
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalprocfile@sha256:69b94b6e4e60fbbc6aebb96a5f36bc1d853b2a09398e15ab2de7f17d70b30d3c
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalappdynamics@sha256:2ba65ddc8e33244816f4c941fc03d2313165b6575ebc63f130f580ed8db6cf46
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalaspectj@sha256:090ea4a40855e19ef58bdb955a20345ba16e54bb68d64aae81d7eda2f4c5e664
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalazureapplicationinsights@sha256:7388b5fc65691cc4bf32f9bb78b7daaa4a03292ca3c9622572b4f0cae16faf13
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalcaintroscope@sha256:c7fd19cfd64a7ebf6375ed8a10792e9445a5453f05b58fbc94b7cb734718cea7
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalclientcertificatemapper@sha256:184ed6083629c21c01d2d9973a20d8b66ee4ad337d2a71bb9c502e1aa47460be
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalcontainersecurityprovider@sha256:1ad18e7899c894ae5e767dcdd230184dc407c205024056ac9eeb4a7e6bd6ff53
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotaldebug@sha256:e83089bbeb70607d554911714cbe2698a00202b9197add273a9fc23d80564761
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalelasticapm@sha256:b210720c7fe95d2e8e2b7b9ddc54e7be5cf5bf687e97eba6d272b2af5f4b3a87
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalgemalto@sha256:cb47b5e8d3416b811a6a406f5c23851e6a58324d5a89ed05fbbc1f61dfbda781
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalgooglestackdriver@sha256:90a0a14eddad239eebe811bc2f2367d974aa091cf0868741b50d0d392fd1ec95
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotaljacoco@sha256:d423bf9954c4ce7e45fbed7c48846b8ec0da06a86fb0b4b5cd3e7bbf4ddd71da
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotaljdbc@sha256:a3737f83dfddfcc3a6bae2c5a0fcb2b6ea440ef0eebc69a12b08d91648ba193b
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotaljmx@sha256:e0d81337e3ed662bf608852bda8a776a6b09fb844427eb9544623ace64fdb76b
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotaljprofiler@sha256:64b85120476473d8e6e0e78cc81469256926c18fa20950e30fef0833bc0d84f2
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotaljrebel@sha256:5333a8ad8c52262ea3015c37195ee23f62f21a063c3c3a02f5273e8532498673
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalnewrelic@sha256:eb77795fa18015071940d15a80a7c2b2ce1faf96a3f7e172a78ea3f14187248b
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotaloverops@sha256:44b81de4119a3f56422f8576abb924aa4ca2ef6ed93564f704dbccfce4eeb007
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalriverbedappinternals@sha256:e3c508dc104c5c00baa035ea6811499d10906d41dbb0474f7d3031392e9e23e9
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalskywalking@sha256:10ff1d8c3586d0aa7ec1b4404260dc770738419bf1a4972981e485ed41a07b58
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalspringautoreconfiguration@sha256:07f89f7a0a7d33f6b637aeecca04372b31fdbcd4298a76fdbc0cd84716f3850b
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalsynopsys@sha256:93c60d54a9abd214ad207cdecec908ffff64d33f650653341b06e7e4112b9f61
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalyourkit@sha256:0422d9bf168a06f5f2e20598499329892ed819c7931e5a8b39bc15d04dffa2f4
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/orgcloudfoundrynode-engine@sha256:357846a8d1756ac272aaca70e0711af1a90b2b570a0f29b4ed6cd6ecb89590a2
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/orgcloudfoundryyarn@sha256:dfa24ebbbd75c300a32832165957faadd9ef535408b71b914780636a2cc739e1
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/iopivotalcontrastsecurity@sha256:6292d89c658239e31c82e99b54ed3bf3df3b0dd93cfcb113988eba08d8fe768a
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/orgcloudfoundrynpm@sha256:e05c1b882fb061dfd35d684ca91da5a708ee696e08e72089cac4f1987f13508f
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/orgcloudfoundrypython-runtime@sha256:247947089fce6fd64ec94793178361df6ab8882381f0c16ea409f3871f4d4150
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/orgcloudfoundrypipenv@sha256:d7870dc5754889b32df334e3eed9762eacc9a47d47e30c1fef51ccd51521b295
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/orgcloudfoundrypip@sha256:6a1fab789b6af5a2abc3c5004b5f30ccbdeffa8f6fac88b6514b7df79c4a4b53
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/orgcloudfoundryconda@sha256:65099a4bd447a7505876dbd3ad86ee5d3e150da540df29dc6ee635249fbe8043
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/orgcloudfoundrygo-compiler@sha256:2ef9887c004be02680857858c4638f1c88ecbd8240c2a4ddacec625e3a66ab4f
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/orgcloudfoundrygo-mod@sha256:01ad4ce817b9d370bd38340bc0c0b5d479ce4d6142cf51ff13033f18c6e2987d
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/orgcloudfoundrydep@sha256:e066b502a1bbf144403a4ffd8797b5e0fc1817b1c0d5d3e4aa268a5c98a071f3
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/orgcloudfoundryphp-dist@sha256:43ebefd845a5e7bcd15b58f03d58cdaf73b6b3fee0a55e08d030a731ba07e7b0
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/orgcloudfoundryphp-composer@sha256:95cc1594e33211847e44bcaa81358bde9ceb9ae708c3648d8f473f6d527a04e5
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/orgcloudfoundryhttpd@sha256:7f56486f878942f9a0b77d9fd5715ada2b8f937a20650c7c35b10d767986079e
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/orgcloudfoundryphp-web@sha256:4e76d496b4be6a994d0b683c8559977857aa5476f430ddb41b98155375e84578
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/orgcloudfoundrynginx@sha256:85a45b48802afef2eec4a19f12257305caad34ce80eae328a50a0fb83b63bfcc
+  - image: gcr.io/cf-build-service-dev-219913/buildpackages/orgcloudfoundrydotnet-core@sha256:d3dbe0d70f93776db037c6445af247669869f73622154dd25628a18c64307581

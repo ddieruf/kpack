@@ -1,0 +1,79 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kpack
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: secret
+  namespace: kpack
+type: kubernetes.io/dockerconfigjson
+data:
+  .dockerconfigjson: eyJhdXRocyI6IHsicmVnaXN0cnkuZGVmYXVsdC5zdmMuY2x1c3Rlci5sb2NhbDo1MDAwIjogeyJ1c2VybmFtZSI6ICJ3bWh2YXp6eWhzIiwgInBhc3N3b3JkIjogInZubmh3bnBpeG0iLCAiYXV0aCI6ICJkMjFvZG1GNmVubG9jenAyYm01b2QyNXdhWGh0In19fQ==
+---
+apiVersion: experimental.kpack.pivotal.io/v1alpha1
+kind: Store
+metadata:
+  name: store
+spec:
+  sources:
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalsnyk@sha256:b3cfd29555417394877e15235009b508273939dd5ffa255e45313b1e54f3b048
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalsnyk@sha256:b3cfd29555417394877e15235009b508273939dd5ffa255e45313b1e54f3b048
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalopenjdk@sha256:90106af66d27837027b89bd00e5d7d5b5101f67338d0d36263b97527d41a9b47
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalbuildsystem@sha256:b90146cc5f0864d4c1e7b87637e1c7970b429c86bd9f2aac2d9fa5fad02e7ebd
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalwso2@sha256:84bc94982aa8ef81c2c2f50a5be3aacf5c9b921c490a63f14be9b135b9501b06
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotaljvmapplication@sha256:cab6cea6debfe22d1bd16a9a827e86d30d814001367640f22ca295263dd3e437
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalgroovy@sha256:0c17310501a55e367d75396e9a1a6d3532edb7cb765a660aa1b480a810f42cfe
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotaltomcat@sha256:4385d01562a82320af229e952662dbad87ec751ffa1f9477d85aabfa6862a794
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalspringboot@sha256:666c4455ae8b0a96f71c97671c0ff2c77de229f1456cd86ede6260852a3fc1b3
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotaldistzip@sha256:50201756a9ec041a327fcc95eb4f9d3722af39847cd50b333402d3e3188eee8f
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalprocfile@sha256:f49cf0ca6d41f587d7e0f9cacbedb0ed3f06ca303b3f12e47053be45e8761708
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalappdynamics@sha256:0bac901b4d4fad9632441fda2ecca5a22821aa91f01ac6252bdd0b2a44cec59f
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalaspectj@sha256:405c9c90c3086231c802ff9d7887d59f3db99def7232faa4b43a33d04145bd80
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalazureapplicationinsights@sha256:ea6a581593ec364a4a460a7586a8b9ac0ff9cefdce9b87ec6424623ec7bb3b85
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalcaintroscope@sha256:8705ce5ba83f8bf0474b2a943290dbfd76e39ad83b5ca0339a4a5f01bc0f4881
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalclientcertificatemapper@sha256:c1fb3f654b40d0cd446573b86832841f292f6ffe31d0c83449cb20c95fbea599
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalcontainersecurityprovider@sha256:f986c00f586749ec9ba519a9ba8abac3739d8d0697c4770501353cb6ee470c64
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotaldebug@sha256:0bbc612e96273189867f815dd2a05e6a5b049e42e1c41d499e58999f3f4f8a6a
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalelasticapm@sha256:c3ff3edc94e9b4382617c372882d36c122c8a3480fbba778d3b4727671144a70
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalgemalto@sha256:75db51bba20f937dab55d6136cc71e48ab9f35855db20dd712d249f2b39aa286
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalgooglestackdriver@sha256:1f41b7e4996f4c9723b7aaef3ae42eb0300f6c9bb1d725034f0c778cecafeb86
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotaljacoco@sha256:7cbe0f18853573686a07b99cf62d528ced6564e71bcbdadba69fefeb48599929
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotaljdbc@sha256:37c192119cfacb6c3af0b20ba5b63ec94c14604fca530ab32eaaaef9f52bfa38
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotaljmx@sha256:a478a4c3b9954054a5dd0db01e95908d4daf1289509c0619a9bcc4799cdbbd66
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotaljprofiler@sha256:d33d726d7bb1f4ee7f5c42d808f95f273e33a6cfdbb86af6d2129a0665d25447
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotaljrebel@sha256:076134aa8349ee31f8b2839aa11bffdf73a6a69bd52ecb0fae7506a3e09045f6
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalnewrelic@sha256:0651b78b838a4f599eb599d2deff2770f4fd58df97635de606b73c4ed8ced4be
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotaloverops@sha256:28899f57a8760590b599e39e0a8d919fbf7a7620dfc1a8ca5f58e1e169632875
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalriverbedappinternals@sha256:ecb9fbcb2f09bdfcbdbda33fddcf18d663078f6562a4beca830d281d45c46256
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalskywalking@sha256:86f882c9e881e750b1a2b342a9262b6d22dca19527bd25280b307ac5e7c5d6c9
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalspringautoreconfiguration@sha256:29c271cd33230e8d7ddfc4a60ea6a5760b6a31f8647281c7b26c7d6744463ac7
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalsynopsys@sha256:00050e4da2fcbc78e4df4c6c609013f03f11455aeacf8db12492e01104143334
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalyourkit@sha256:eaae885cecf75adabb9260e1484b3951e2001ba07172f7fc6f66e1061e85f7eb
+  - image: registry.default.svc.cluster.local:5000/relocate/orgcloudfoundrynode-engine@sha256:c032e7bd7869bd670d20589f2eb7c398a6d01d01becc2f5e3cae68e46a2885f7
+  - image: registry.default.svc.cluster.local:5000/relocate/orgcloudfoundryyarn@sha256:c3656b3a078e3a6d6a8cd2cf62857f659a49698bf49bf627927097a08277307a
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalcontrastsecurity@sha256:d6a4cc7b0254436dd490e51fe888f5485f00642a09022907ddf54411b39c4b1b
+  - image: registry.default.svc.cluster.local:5000/relocate/orgcloudfoundrynpm@sha256:194900f753a3dec553f1087e58203638d5eb9defc3a80555d094b9816f7e153f
+  - image: registry.default.svc.cluster.local:5000/relocate/orgcloudfoundrypython-runtime@sha256:3fe4544a723fde812a2682064ba57fda445c262745daf767d0ed90310ba76308
+  - image: registry.default.svc.cluster.local:5000/relocate/orgcloudfoundrypipenv@sha256:fab4f67860aaad2ce9612b70de80d7a94d7a1f2bec2e125accf869cf0ebaaefa
+  - image: registry.default.svc.cluster.local:5000/relocate/orgcloudfoundrypip@sha256:8299f5a6caee0f617556272fa43ba54a09020a2aa2e455de2053d79ba1340c4e
+  - image: registry.default.svc.cluster.local:5000/relocate/orgcloudfoundryconda@sha256:49bc3b2bcd7aa46bee0307fed2b78ca29443badc49cfdf7818746bf5d8553da0
+  - image: registry.default.svc.cluster.local:5000/relocate/orgcloudfoundrygo-compiler@sha256:fdbc4d76c522156bf86a89cdf33787a535da9a22eb746e47bcad0be2f90bb811
+  - image: registry.default.svc.cluster.local:5000/relocate/orgcloudfoundrygo-mod@sha256:812b9bffee3587f8ee38335a3646de99e0c527e05a21461b324fabe1c92cc0b8
+  - image: registry.default.svc.cluster.local:5000/relocate/orgcloudfoundrydep@sha256:0d7dd9defe60b802e3f10017b304f07fe9c1fe5056d910401faa136680c4107a
+  - image: registry.default.svc.cluster.local:5000/relocate/orgcloudfoundryphp-dist@sha256:c612d1a5dd97f9ac96c13057d121a066245fa8ac715dcce2bfe137f7c17b8874
+  - image: registry.default.svc.cluster.local:5000/relocate/orgcloudfoundryphp-composer@sha256:50c3f09d306c7598150db788ac80f6252f323f7fc411a6fc1f111c2e1552216f
+  - image: registry.default.svc.cluster.local:5000/relocate/orgcloudfoundryhttpd@sha256:2af7dbffbee10e85ac0b279efae29052e6a1e4413d8dc781651ec22500f6aeb4
+  - image: registry.default.svc.cluster.local:5000/relocate/orgcloudfoundryphp-web@sha256:57f6b466c0f90cc68b39bd3025bdcaf7ee9c41c2e9cd60eed6b186aa7b3c4d0f
+  - image: registry.default.svc.cluster.local:5000/relocate/orgcloudfoundrynginx@sha256:c4b946176136099bb222c496483130a4357fb09ab9c0e306288a20eb0d4d06c3
+  - image: registry.default.svc.cluster.local:5000/relocate/orgcloudfoundrydotnet-core@sha256:2c176d2507e0fda3bc0a6c630a777e5533c7bb22621a3d54f4b0e5a93ebfd3aa
+
+---
+apiVersion: experimental.kpack.pivotal.io/v1alpha1
+kind: Store
+metadata:
+  name: slow
+spec:
+  sources:
+  - image: registry.default.svc.cluster.local:5000/relocate/iopivotalsnyk@sha256:b3cfd29555417394877e15235009b508273939dd5ffa255e45313b1e54f3b048
